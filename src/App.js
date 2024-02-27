@@ -5,7 +5,7 @@ import Expenses from './components/Expenses/Expenses';
 
 
 const App = () => {
-  const expenses = [
+  let expenses = [
     {
       id: 'e1',
       title: 'Toilet Paper',
@@ -27,8 +27,9 @@ const App = () => {
     },
   ];
 
-  const addExpanse = ()=>{
-
+  const addNewExpanse = (expanse)=>{
+    console.log('in app js');
+    console.log(expanse);
   }
 
   // return React.createElement(
@@ -40,7 +41,7 @@ const App = () => {
 
   return (
     <div>
-      <NewExpense />
+      <NewExpense onAddExpanse={addNewExpanse} />
       <Expenses items={expenses} />
     </div>
   );

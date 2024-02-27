@@ -3,12 +3,13 @@ import NewExpenseForm from './NewExpenseForm';
 import './NewExpense.css';
 
 
-function NewExpenes(){
+function NewExpenes(props){
     const onSaveExpanseDataHandler = (enterdExpanseData)=>{
         const ExpanseData = {
             ...enterdExpanseData,
             id : Math.random()
         }
+        props.onAddExpanse(ExpanseData);
         console.log(ExpanseData);
     }
     return(
