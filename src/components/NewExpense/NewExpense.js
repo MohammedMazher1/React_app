@@ -6,11 +6,10 @@ import './NewExpense.css';
 function NewExpenes(props){
     const onSaveExpanseDataHandler = (enterdExpanseData)=>{
         const ExpanseData = {
-            ...enterdExpanseData,
-            id : Math.random()
+            id : Math.random(),
+            ...enterdExpanseData
         }
         props.onAddExpanse(ExpanseData);
-        console.log(ExpanseData);
     }
     return(
         <div className='new-expense'>
