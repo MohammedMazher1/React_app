@@ -4,9 +4,16 @@ import './NewExpense.css';
 
 
 function NewExpenes(){
+    const onSaveExpanseDataHandler = (enterdExpanseData)=>{
+        const ExpanseData = {
+            ...enterdExpanseData,
+            id : Math.random()
+        }
+        console.log(ExpanseData);
+    }
     return(
         <div className='new-expense'>
-            <NewExpenseForm />
+            <NewExpenseForm onSaveExpanse={onSaveExpanseDataHandler}/>
         </div>
     );
 }
